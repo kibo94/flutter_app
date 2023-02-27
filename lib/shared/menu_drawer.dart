@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/pages/bmi_page.dart';
 import 'package:my_app/pages/home.dart';
-import 'package:my_app/pages/weather_page.dart';
+import 'package:my_app/pages/transactions.dart';
 
 class MenuDrawer extends StatelessWidget {
   const MenuDrawer({Key? key}) : super(key: key);
@@ -19,8 +19,7 @@ class MenuDrawer extends StatelessWidget {
     final List<String> menuTitles = [
       "Home",
       "BMI Calculator",
-      "Weather",
-      "Traning"
+      "Transactions",
     ];
     List<Widget> menuItems = [];
     menuItems.add(const DrawerHeader(
@@ -42,10 +41,10 @@ class MenuDrawer extends StatelessWidget {
                 break;
 
               case "BMI Calculator":
-                screen = BmiPage();
+                screen = const BmiPage();
                 break;
-              case "Weather":
-                screen = WeatherPage();
+              case "Transactions":
+                screen = const Transactions();
                 break;
               default:
             }

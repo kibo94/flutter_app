@@ -28,10 +28,10 @@ class BottomNavBar extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: Icon(
-            Icons.monitor,
+            Icons.shopping_bag,
             color: Colors.grey,
           ),
-          label: "BMI",
+          label: "Cart",
         )
       ],
     );

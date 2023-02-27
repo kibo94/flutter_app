@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/data/http_helper.dart';
 import 'package:my_app/models/weather_model.dart';
+import 'package:my_app/ui/filters.dart';
 
 class WeatherPage extends StatefulWidget {
   const WeatherPage({Key? key}) : super(key: key);
@@ -15,20 +15,23 @@ class _WeatherPageState extends State<WeatherPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Weather'),
+          title: const Text('Filter products'),
         ),
-        body: Padding(
-          padding: EdgeInsets.all(16),
-          child: Text("sadas"),
-        ));
+        body: Container(
+            color: Colors.grey,
+            child: Column(
+              children: const [
+                Text("Weather"),
+                Filters(),
+              ],
+            )));
   }
-
-  Future getData() async {
-    HttpHelper helper = HttpHelper();
-    var res = await helper.getWeather('London');
-    print(result.name);
-    setState(() {
-      result = res;
-    });
-  }
+  // Future getData() async {
+  //   HttpHelper helper = HttpHelper();
+  //   var res = await helper.getWeather('London');
+  //   print(result.name);
+  //   setState(() {
+  //     result = res;
+  //   });
+  // }
 }
